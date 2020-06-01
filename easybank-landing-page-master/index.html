@@ -3,7 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <script type="text/javascript">
+    var letter= "h"
+    function change() {
+      var image= document.getElementById('img');
+      if (letter=="h") {
+        image.src = "images/icon-close.svg";
+        letter = "c"
+      } else {
+        image.src = "images/icon-hamburger.svg";
+        letter = "h"
+      }
+    };
+  </script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@200;300;400&display=swap" rel="stylesheet">
 <!-- Bootstrap -->
@@ -25,8 +37,8 @@
   <section id="Navigation-bar">
     <nav class="navbar navbar-expand-lg ">
       <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="logo"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon1"></span>
+      <button class="navbar-toggler" type="button" onclick="change();" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img id="img" src="images/icon-hamburger.svg" alt="hamburger-icon">
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
